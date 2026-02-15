@@ -147,7 +147,7 @@ export default function Footer({ theme }) {
               className="flex items-center gap-2 hover:underline"
             >
               <Mail size={16} />
-              info@achintyaah.com
+              info@achintyaahgroup.com
             </a>
           </div>
 
@@ -161,7 +161,7 @@ export default function Footer({ theme }) {
               },
               {
                 Icon: Mail,
-                link: "mailto:info@achintyaah.com",
+                link: "mailto:info@achintyaahgroup.com",
                 external: false,
               },
             ].map(({ Icon, link, external }, idx) => (

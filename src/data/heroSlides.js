@@ -1,17 +1,28 @@
-export const heroSlides = [
+export const slides = [
   {
-    title: "IT Solutions for Modern Business",
-    desc: "We build scalable, secure and high-performance digital products.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    title: "Goa Infrastructure Development Project",
+    desc: "A large-scale on-ground project focused on modern infrastructure execution, quality standards, and timely delivery in Goa.",
+    image: "/src/assets/img/hero_carousel/goa-project-1.png",
   },
   {
-    title: "Web & Mobile App Development",
-    desc: "Custom applications tailored to your business needs.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    title: "Battery Manufacturing & Energy Systems Project",
+    desc: "An industrial project centered on advanced battery production, energy efficiency, and sustainable power solutions.",
+    image: "/src/assets/img/hero_carousel/battery-project-1.png",
   },
   {
-    title: "Cloud & Enterprise Services",
-    desc: "Transform your infrastructure with cloud-ready solutions.",
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786",
+    title: "Enterprise-Ready Cloud & IT Solutions",
+    desc: "Future-proof your infrastructure with scalable, reliable, and cloud-first technologies.",
+    image: "/src/assets/img/hero_carousel/office-5.jpeg",
+  },
+  {
+    title: "Ooty Project – Site Development",
+    desc: "On-site development work including layout preparation, material handling, and construction execution.",
+    image: "/src/assets/img/hero_carousel/ooty-project-3.jpg",
+  },
+  
+  {
+    title: "Ooty Project – Field Execution",
+    desc: "Field-level execution involving planning, supervision, and phased construction activities.",
+    image: "/src/assets/img/hero_carousel/ooty-peoject-1.jpeg",
   },
 ];

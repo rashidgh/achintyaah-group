@@ -3,41 +3,13 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import { useEffect } from "react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import AnimatedText from "./AnimatedText";
+import { slides } from "../data/heroSlides";
 
-const slides = [
-  {
-    title: "Goa Infrastructure Development Project",
-    desc: "A large-scale on-ground project focused on modern infrastructure execution, quality standards, and timely delivery in Goa.",
-    image: "/src/assets/img/hero_carousel/goa-project-1.png",
-  },
-  {
-    title: "Battery Manufacturing & Energy Systems Project",
-    desc: "An industrial project centered on advanced battery production, energy efficiency, and sustainable power solutions.",
-    image: "/src/assets/img/hero_carousel/battery-project-1.png",
-  },
-  {
-    title: "Enterprise-Ready Cloud & IT Solutions",
-    desc: "Future-proof your infrastructure with scalable, reliable, and cloud-first technologies.",
-    image: "/src/assets/img/hero_carousel/office-5.jpeg",
-  },
-  {
-    title: "Ooty Project – Site Development",
-    desc: "On-site development work including layout preparation, material handling, and construction execution.",
-    image: "/src/assets/img/hero_carousel/ooty-project-3.jpg",
-  },
-  
-  {
-    title: "Ooty Project – Field Execution",
-    desc: "Field-level execution involving planning, supervision, and phased construction activities.",
-    image: "/src/assets/img/hero_carousel/ooty-peoject-1.jpeg",
-  },
-];
+
 
 export default function HeroCarousel() {
   useEffect(() => {
@@ -78,7 +50,7 @@ export default function HeroCarousel() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, ease: "easeOut" }}
-                  className="relative z-10 px-2 sm:px-4 text-center break-words max-w-xs sm:max-w-2xl md:max-w-4xl w-full"
+                  className="relative z-10 px-2 sm:px-4 text-center break-normal max-w-xs sm:max-w-2xl md:max-w-4xl "
                 >
                   <AnimatedText
                     text={slide.title}
