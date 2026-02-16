@@ -7,9 +7,7 @@ const navItems = [
   { label: "Businesses", hash: "#businesses" },
   { label: "About Group", hash: "#about" },
   { label: "Developments", hash: "#projects" },
-
   { label: "Leadership", hash: "#team" },
-
   { label: "Contact", hash: "#contact" },
 ];
 
@@ -49,7 +47,7 @@ export default function Navbar({ theme, setTheme }) {
         }
       `}
     >
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center relative">
+      <div className="max-w-full mx-auto px-6 h-16 flex items-center relative">
         {/* Logo */}
         <div
           onClick={() => handleClick("#home")}
@@ -107,7 +105,7 @@ export default function Navbar({ theme, setTheme }) {
           <button
             onClick={toggleTheme}
             className={`
-              p-2 rounded-full transition
+              p-2 rounded-full transition cursor-pointer
               ${
                 isNight
                   ? "bg-white/10 hover:bg-white/20"
@@ -164,7 +162,7 @@ export default function Navbar({ theme, setTheme }) {
                 <div className="flex items-center justify-between mb-8">
                   <button
                     onClick={toggleTheme}
-                    className={`p-2 rounded-full
+                    className={`p-2 rounded-full 
                       ${
                         isNight
                           ? "bg-white/10 hover:bg-white/20"

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ProjectsModal from "./ProjectsModal";
+import ProjectsModal from "./OurBusinessModal";
 
 export default function ProjectCard({
   icon: Icon,

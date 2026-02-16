@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { projects } from "../data/projects";
-import ProjectCard from "./ProjectsCard";
+import ProjectCard from "./OurBusinessCard";
 
 
 

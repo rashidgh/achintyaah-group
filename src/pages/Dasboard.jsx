@@ -4,10 +4,11 @@ import HeroCarousel from "../components/HeroCarosel";
 import AboutUs from "../components/AboutUs";
 import ScrollToTop from "../components/ScrollToTop";
 import useTheme from "../hooks/useTheme";
-import Projects from "../components/Projects";
+import Projects from "../components/OurBusiness";
 import Footer from "../components/Footer";
 import LeadershipSection from "../components/LeadershipSection";
 import ProjectShowcaseSection from "../components/projectSlider/ProjectShowcaseSection";
+import CoreValue from "../components/CoreValue";
 
 const Dashboard = () => {
   const [theme, setTheme] = useTheme(); // ✅ SINGLE SOURCE
@@ -25,7 +26,8 @@ const Dashboard = () => {
       {/* <OurClients theme={theme} /> */}
       <Projects theme={theme} />
       <AboutUs theme={theme} />
-      <ProjectShowcaseSection theme={theme}/>
+      <CoreValue theme={theme} />
+      <ProjectShowcaseSection theme={theme} />
       <LeadershipSection theme={theme} />
       <Footer theme={theme} />
       <ScrollToTop theme={theme} />
