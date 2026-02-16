@@ -13,7 +13,7 @@ import battery2 from "../assets/images/dualCarosel/battery2.avif";
 import battery3 from "../assets/images/dualCarosel/battery3.avif";
 import battery4 from "../assets/images/dualCarosel/battery4.avif";
 import battery5 from "../assets/images/dualCarosel/battery5.avif";
-import { b } from "framer-motion/client";
+
 const projectSliderData = [
   {
     id: 1,
