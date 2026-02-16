@@ -1,160 +1,86 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { features } from "../data/footerData";
-import { ChevronDown } from 'lucide-react';
-
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
 
 const CoreValue = ({ theme }) => {
   const isDay = theme !== "night";
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const [showAll, setShowAll] = useState(false);
-  const [expandedCards, setExpandedCards] = useState({});
-
-  const getShortText = (text, words = 20) => {
-    const arr = text.split(" ");
-    return arr.length > words
-      ? arr.slice(0, words).join(" ") + "..."
-      : text;
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
+
   return (
-    <div>
-      {/* CORE VALUES */}
-      <div className="pb-28">
-        <h2 className="text-center text-3xl font-bold mb-20">
-          Our{" "}
-          <span className={isDay ? "text-indigo-600" : "text-indigo-400"}>
-            Core Values
-          </span>
-        </h2>
+    <div className="pb-28">
+      {/* HEADING */}
+      <h2 className="text-center text-3xl font-bold mb-16">
+        Our{" "}
+        <span className={isDay ? "text-indigo-600" : "text-indigo-400"}>
+          Core Values
+        </span>
+      </h2>
 
-        <div className="w-full px-6 lg:px-24 grid grid-cols-1 gap-14">
-          {(showAll ? features : features.slice(0, 3)).map((item, index) => (
-            <div
-              key={item.title}
-              data-aos="fade-up"
-              data-aos-delay={index * 120}
-              className={`rounded-3xl 
-p-6 md:p-10 lg:p-12 
-flex flex-col md:flex-row 
-gap-6 md:gap-10
-transition-all duration-300
-${isDay
-                  ? "bg-white shadow-md md:shadow-xl hover:shadow-2xl"
-                  : "bg-white/5 border border-white/10 hover:border-indigo-400/40"
-                }`}
-
-            >
-              {/* ICON */}
-              <div className="shrink-0">
-                <div
-                  className="
-      w-12 h-12 
-      md:w-18 md:h-18
-      rounded-xl md:rounded-2xl
-      bg-indigo-100 
-      flex items-center justify-center 
-      text-indigo-600
-    "
-                >
-                  <item.icon size={22} className="md:w-8 md:h-8" />
-                </div>
-              </div>
-
-
-
-              {/* CONTENT */}
-              <div className="flex-1">
-                <h3 className="text-2xl font-semibold mb-3">
-                  {item.title}
-                </h3>
-
-                <p
-                  className={`${isDay ? "text-slate-700" : "text-slate-300"} text-base leading-relaxed`}
-                >
-                  {/* Mobile */}
-                  <span className="block md:hidden">
-                    {expandedCards[index]
-                      ? item.text
-                      : getShortText(item.text, 20)}
-                  </span>
-
-                  {/* Desktop */}
-                  <span className="hidden md:block">
-                    {item.text}
-                  </span>
-                </p>
-
-                {/* See More / Less – Mobile Only */}
-                {item.text.split(" ").length > 40 && (
-                  <button
-                    onClick={() =>
-                      setExpandedCards((prev) => ({
-                        ...prev,
-                        [index]: !prev[index],
-                      }))
-                    }
-                    className="
-      mt-3 md:hidden 
-      inline-flex items-center gap-1.5
-      text-indigo-600 font-semibold text-sm
-      transition-all duration-300
-      hover:text-indigo-700
-    "
-                  >
-                    <span>
-                      {expandedCards[index] ? "See less" : "See more"}
-                    </span>
-
-                    <span
-                      className={`
-        transition-transform duration-300
-        ${expandedCards[index] ? "rotate-180" : ""}
-      `}
-                    >
-                      <ChevronDown size={16} />
-                    </span>
-                  </button>
-                )}
-
-              </div>
-
-            </div>
-          ))}
-        </div>
-
-        {/* SEE MORE BUTTON */}
-        <div className="flex justify-end mt-20 mr-20 ">
-          <button
-            onClick={() => setShowAll((prev) => !prev)}
-            className={`
-      group inline-flex items-center gap-3
-      px-9 py-3.5 rounded-full
-      text-sm font-semibold tracking-wide
-      transition-all duration-300
-      hover:-translate-y-0.5 hover:shadow-xl cursor-pointer
-      ${isDay
-                ? "bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-500/30"
-                : "bg-indigo-500 text-white hover:bg-indigo-600 shadow-indigo-400/20"
+      {/* ACCORDION */}
+      <div className="w-full px-6 lg:px-24 space-y-6">
+        {features.map((item, index) => (
+          <div
+            key={item.title}
+            className={`rounded-2xl transition-all duration-300
+              ${
+                isDay
+                  ? "bg-white shadow-md hover:shadow-xl"
+                  : "bg-white/5 border border-white/10"
               }
-    `}
+            `}
           >
-            <span>
-              {showAll ? "Show Less" : "See More Values"}
-            </span>
-
-            <span
-              className={`
-        transition-transform duration-300
-        ${showAll ? "rotate-180" : ""}
-      `}
+            {/* HEADER */}
+            <button
+              onClick={() => toggleAccordion(index)}
+              className="w-full flex cursor-pointer items-center justify-between p-6 text-left"
             >
-              <ChevronDown size={18} />
-            </span>
-          </button>
-        </div>
+              <h3 className="text-lg md:text-xl font-semibold">
+                {item.title}
+              </h3>
 
+              <div
+                className={`transition-transform duration-300 ${
+                  activeIndex === index ? "rotate-180" : ""
+                }`}
+              >
+                {activeIndex === index ? (
+                  <Minus size={20} />
+                ) : (
+                  <Plus size={20} />
+                )}
+              </div>
+            </button>
+
+            {/* CONTENT */}
+            <AnimatePresence initial={false}>
+              {activeIndex === index && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  className="overflow-hidden "
+                >
+                  <div
+                    className={`px-6 pb-6 text-base leading-relaxed ${
+                      isDay ? "text-slate-700" : "text-slate-300"
+                    }`}
+                  >
+                    {item.text}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CoreValue
+export default CoreValue;

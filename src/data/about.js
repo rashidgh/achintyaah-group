@@ -1,5 +1,13 @@
-// src/data/about.js
+import batteryCarosel from "../assets/images/about/battery.avif";
+import ootyCarosel from "../assets/images/about/otty.avif";
+import goaCarosel from "../assets/images/about/goa.avif";
+import corporateCarosel from "../assets/images/about/corporate.jpg";
 
+export const aboutImages = [
+  goaCarosel,
+  ootyCarosel,
+  batteryCarosel, corporateCarosel
+]
 
 export const aboutMoreData = {
   title: "About This App",

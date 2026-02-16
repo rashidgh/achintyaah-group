@@ -6,11 +6,6 @@ import carsole5 from "/src/assets/images/hero/otty_carosel3.jpg";
 
 export const slides = [
   {
-    title: "Enterprise-Ready Cloud & IT Solutions",
-    desc: "Empowering businesses with scalable, cloud-first architecture designed for the modern digital era. We provide robust, reliable IT frameworks that allow for seamless data integration, enhanced security, and future-proof enterprise operations.",
-    image: carsole1,
-  },
-  {
     title: "Goa Infrastructure Development Project",
     desc: "A comprehensive on-ground initiative focused on modernizing urban infrastructure. Our team manages end-to-end execution, ensuring strict adherence to international quality standards and high-efficiency delivery timelines across the Goa region.",
     image: carsole2,
@@ -19,6 +14,11 @@ export const slides = [
     title: "Advanced Battery Manufacturing & Storage",
     desc: "Scale your energy operations with high-performance battery production and storage systems. We deliver industrial-grade solutions designed for maximum energy density, long-cycle reliability, and seamless integration into modern power grids.",
     image: carsole3,
+  },
+  {
+    title: "Enterprise-Ready Cloud & IT Solutions",
+    desc: "Empowering businesses with scalable, cloud-first architecture designed for the modern digital era. We provide robust, reliable IT frameworks that allow for seamless data integration, enhanced security, and future-proof enterprise operations.",
+    image: carsole1,
   },
   {
     title: "Ooty Project – Site Development",

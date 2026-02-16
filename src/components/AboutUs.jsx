@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
-import { aboutMoreData } from "../data/about";
+import { aboutImages, aboutMoreData } from "../data/about";
 import AboutModal from "../components/AboutModal";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -51,11 +51,7 @@ export default function AboutUs({ theme }) {
               pagination={{ clickable: true }}
               className="w-full h-80"
             >
-              {["/src/assets/img/projects/office/office-8.jpeg",
-                "https://loansinstitution.com/wp-content/uploads/2017/09/4019991-business-meeting-wallpaper.jpg",
-                "/src/assets/img/projects/ooty/ooty-project-5.jpeg",
-                "/src/assets/img/projects/battery/battery-project-2.jpeg",
-              ].map((img, index) => (
+              {aboutImages.map((img, index) => (
                 <SwiperSlide key={index}>
                   <img
                     src={img}
@@ -114,7 +110,7 @@ export default function AboutUs({ theme }) {
           </div>
         </div>
 
-     
+
 
 
       </section>
