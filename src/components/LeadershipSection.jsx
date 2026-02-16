@@ -1,19 +1,5 @@
-const leaders = [
-    {
-        name: "Dr. Sreetharan Murthy",
-        role: "Chairman, Achintyaah Group",
-        image: "/src/assets/img/Sreetharan.png",
-        description:
-            "A visionary technocrat with over 20 years at the forefront of technology-led industries. He has pioneered innovation-driven strategies, guiding the organization toward sustainable growth, operational excellence, and long-term impact across diverse sectors.",
-    },
-    {
-        name: "G Krishna Kumar",
-        role: "Director of Global Operations",
-        image: "/src/assets/img/g-krishna-kumar.jpg",
-        description:
-            "He oversees global project operations with a strong focus on execution excellence. Known for strategic planning and coordination, he has led major initiatives ensuring timely delivery, quality benchmarks, and consistent project outcomes.",
-    },
-];
+import { leaders } from "../data/leaders";
+
 
 export default function LeadershipSection({ theme }) {
     const isDay = theme !== "night";
