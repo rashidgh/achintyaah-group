@@ -1,3 +1,19 @@
+import otty1 from "../assets/images/dualCarosel/otty1.avif";
+import otty2 from "../assets/images/dualCarosel/otty2.avif";
+import otty3 from "../assets/images/dualCarosel/otty3.avif";
+import otty4 from "../assets/images/dualCarosel/otty4.avif";
+import otty5 from "../assets/images/dualCarosel/otty5.avif";
+import goa1 from "../assets/images/dualCarosel/goa1.avif";
+import goa2 from "../assets/images/dualCarosel/goa2.avif";
+import goa3 from "../assets/images/dualCarosel/goa3.avif";
+import goa4 from "../assets/images/dualCarosel/goa4.avif";
+import goa5 from "../assets/images/dualCarosel/goa5.avif";
+import battery1 from "../assets/images/dualCarosel/battery1.avif";
+import battery2 from "../assets/images/dualCarosel/battery2.avif";
+import battery3 from "../assets/images/dualCarosel/battery3.avif";
+import battery4 from "../assets/images/dualCarosel/battery4.avif";
+import battery5 from "../assets/images/dualCarosel/battery5.avif";
+import { b } from "framer-motion/client";
 const projectSliderData = [
   {
     id: 1,
@@ -6,12 +22,11 @@ const projectSliderData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 
     images: [
-      "/src/assets/img/projects/ooty/ooty-project-1.jpeg",
-      "/src/assets/img/projects/ooty/ooty-project-2.jpeg",
-      "/src/assets/img/projects/ooty/ooty-project-3.jpeg",
-      "/src/assets/img/projects/ooty/ooty-project-4.jpeg",
-      "/src/assets/img/projects/ooty/ooty-project-5.jpeg",
-      "/src/assets/img/projects/ooty/ooty-project-6.jpeg",
+      otty1,
+      otty2,
+      otty3,
+      otty4,
+      otty5,
     ],
 
     content:
@@ -25,12 +40,11 @@ const projectSliderData = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
 
     images: [
-      "/src/assets/img/projects/goa/goa-project-1.jpeg",
-      "/src/assets/img/projects/goa/goa-project-2.jpeg",
-      "/src/assets/img/projects/goa/goa-project-3.jpeg",
-      "/src/assets/img/projects/goa/goa-project-4.jpeg",
-      "/src/assets/img/projects/goa/goa-project-5.jpeg",
-      "/src/assets/img/projects/goa/goa-project-6.jpeg",
+      goa1,
+      goa2,
+      goa3,
+      goa4,
+      goa5,
     ],
 
     content:
@@ -44,12 +58,11 @@ const projectSliderData = [
       "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 
     images: [
-      "/src/assets/img/projects/battery/battery-project-1.jpeg",
-      "/src/assets/img/projects/battery/battery-project-2.jpeg",
-      "/src/assets/img/projects/battery/battery-project-3.jpeg",
-      "/src/assets/img/projects/battery/battery-project-4.jpeg",
-      "/src/assets/img/projects/battery/battery-project-5.jpeg",
-      "/src/assets/img/projects/battery/battery-project-6.jpeg",
+      battery1,
+      battery2,
+      battery3,
+      battery4,
+      battery5,
     ],
 
     content:
