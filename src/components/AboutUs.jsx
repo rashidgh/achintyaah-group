@@ -25,21 +25,22 @@ export default function AboutUs({ theme }) {
         id="about"
         className={`relative ${isDay
           ? "bg-white text-slate-900"
-          : "bg-gradient-to-b from-slate-950 via-slate-900 to-black text-white"
+          : "bg-linear-to-b from-slate-950 via-slate-900 to-black text-white"
           }`}
       >
         {/* HERO */}
-        <div className="text-center pt-20">
+        <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold">
             About{" "}
             <span className={isDay ? "text-indigo-600" : "text-indigo-400"}>
               Achintyaah Group
             </span>
           </h1>
+          <div className="h-1.5 w-20 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* WHO WE ARE */}
-        <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div
             data-aos="zoom-in"
             className="rounded-2xl overflow-hidden shadow-xl"
@@ -56,7 +57,7 @@ export default function AboutUs({ theme }) {
                   <img
                     src={img}
                     alt="Achintyaah Group"
-                    className="w-full h-[420px] object-cover"
+                    className="w-full h-105 object-cover"
                   />
                 </SwiperSlide>
               ))}

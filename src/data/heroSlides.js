@@ -11,15 +11,11 @@ export const slides = [
     image: carsole2,
   },
   {
-    title: "Advanced Battery Manufacturing & Storage",
-    desc: "Scale your energy operations with high-performance battery production and storage systems. We deliver industrial-grade solutions designed for maximum energy density, long-cycle reliability, and seamless integration into modern power grids.",
+    title: "Advanced Power Supply & Energy Solutions",
+    desc: "Scale your energy operations with high-performance power supply systems. We deliver industrial-grade solutions designed for stable output, high efficiency, and seamless integration into modern electrical infrastructure and smart power networks.",
     image: carsole3,
   },
-  {
-    title: "Enterprise-Ready Cloud & IT Solutions",
-    desc: "Empowering businesses with scalable, cloud-first architecture designed for the modern digital era. We provide robust, reliable IT frameworks that allow for seamless data integration, enhanced security, and future-proof enterprise operations.",
-    image: carsole1,
-  },
+
   {
     title: "Ooty Project – Site Development",
     desc: "SA comprehensive on-ground initiative focused on modernizing urban infrastructure. Our team manages end-to-end execution, ensuring strict adherence to international quality standards and high-efficiency delivery timelines across the Goa region.",
@@ -29,5 +25,10 @@ export const slides = [
     title: "Ooty Project – Field Execution",
     desc: "Driving results through precise field-level management. Our execution strategy involves rigorous planning, real-time supervision, and phased construction activities to ensure project milestones are met with absolute technical accuracy.",
     image: carsole5,
+  },
+  {
+    title: "Enterprise-Ready Cloud & IT Solutions",
+    desc: "Empowering businesses with scalable, cloud-first architecture designed for the modern digital era. We provide robust, reliable IT frameworks that allow for seamless data integration, enhanced security, and future-proof enterprise operations.",
+    image: carsole1,
   },
 ];

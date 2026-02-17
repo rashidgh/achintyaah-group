@@ -14,6 +14,9 @@ const navItems = [
 export default function Navbar({ theme, setTheme }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#home");
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
 
   const isNight = theme === "night";
 
@@ -36,14 +39,36 @@ export default function Navbar({ theme, setTheme }) {
     return () => (document.body.style.overflow = "");
   }, [open]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // scrolling down
+        setShowNav(false);
+      } else {
+        // scrolling up
+        setShowNav(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+
   return (
     <nav
       className={`
-        fixed top-0 left-0 z-50 w-full transition-colors duration-300
-        ${
-          isNight
-            ? "bg-[#0B0F1A]/90 text-white backdrop-blur-lg"
-            : "bg-white/90 text-gray-800 backdrop-blur-md shadow-md"
+        fixed top-0 left-0 z-50 w-full
+  transition-all duration-500
+  ${showNav ? "translate-y-0" : "-translate-y-full"}
+        ${isNight
+          ? "bg-[#0B0F1A]/90 text-white backdrop-blur-lg"
+          : "bg-white/90 text-gray-800 backdrop-blur-md shadow-md"
         }
       `}
     >
@@ -62,7 +87,7 @@ export default function Navbar({ theme, setTheme }) {
             width={36}
           />
           ACHINTYAAH{" "}
-          <span className={isNight ? "text-indigo-400" : "text-indigo-500"}>
+          <span className={isNight ? "text-indigo-600" : "text-indigo-600"}>
             GROUP
           </span>
         </div>
@@ -75,14 +100,13 @@ export default function Navbar({ theme, setTheme }) {
               onClick={() => handleClick(item.hash)}
               className={`
                 relative text-sm font-medium transition cursor-pointer
-                ${
-                  active === item.hash
-                    ? isNight
-                      ? "text-indigo-400"
-                      : "text-indigo-600"
-                    : isNight
+                ${active === item.hash
+                  ? isNight
+                    ? "text-indigo-600"
+                    : "text-indigo-600"
+                  : isNight
                     ? "text-white hover:text-indigo-300"
-                    : "text-gray-800 hover:text-indigo-500"
+                    : "text-gray-800 hover:text-indigo-600"
                 }
               `}
             >
@@ -92,7 +116,7 @@ export default function Navbar({ theme, setTheme }) {
                 <motion.span
                   layoutId="activeLink"
                   className={`absolute left-0 -bottom-1 w-full h-[2px]
-                    ${isNight ? "bg-indigo-400" : "bg-indigo-500"}
+                    ${isNight ? "bg-indigo-600" : "bg-indigo-600"}
                   `}
                 />
               )}
@@ -106,10 +130,9 @@ export default function Navbar({ theme, setTheme }) {
             onClick={toggleTheme}
             className={`
               p-2 rounded-full transition cursor-pointer
-              ${
-                isNight
-                  ? "bg-white/10 hover:bg-white/20"
-                  : "bg-gray-100 hover:bg-gray-200"
+              ${isNight
+                ? "bg-white/10 hover:bg-white/20"
+                : "bg-gray-100 hover:bg-gray-200"
               }
             `}
           >
@@ -121,10 +144,9 @@ export default function Navbar({ theme, setTheme }) {
         <button
           className={`
             md:hidden ml-auto p-2 rounded-full transition
-            ${
-              isNight
-                ? "bg-white/10 hover:bg-white/20"
-                : "bg-gray-100 hover:bg-gray-200"
+            ${isNight
+              ? "bg-white/10 hover:bg-white/20"
+              : "bg-gray-100 hover:bg-gray-200"
             }
           `}
           onClick={() => setOpen(true)}
@@ -163,10 +185,9 @@ export default function Navbar({ theme, setTheme }) {
                   <button
                     onClick={toggleTheme}
                     className={`p-2 rounded-full 
-                      ${
-                        isNight
-                          ? "bg-white/10 hover:bg-white/20"
-                          : "bg-gray-100 hover:bg-gray-200"
+                      ${isNight
+                        ? "bg-white/10 hover:bg-white/20"
+                        : "bg-gray-100 hover:bg-gray-200"
                       }
                     `}
                   >
@@ -176,10 +197,9 @@ export default function Navbar({ theme, setTheme }) {
                   <button
                     onClick={() => setOpen(false)}
                     className={`p-2 rounded-full
-                      ${
-                        isNight
-                          ? "bg-white/10 hover:bg-white/20"
-                          : "bg-gray-100 hover:bg-gray-200"
+                      ${isNight
+                        ? "bg-white/10 hover:bg-white/20"
+                        : "bg-gray-100 hover:bg-gray-200"
                       }
                     `}
                   >
@@ -194,12 +214,11 @@ export default function Navbar({ theme, setTheme }) {
                       key={item.hash}
                       onClick={() => handleClick(item.hash)}
                       className={`py-4 px-3 text-left text-lg rounded-xl transition
-                        ${
-                          active === item.hash
-                            ? isNight
-                              ? "text-indigo-400 bg-white/5"
-                              : "text-indigo-600 bg-gray-100"
-                            : isNight
+                        ${active === item.hash
+                          ? isNight
+                            ? "text-indigo-600 bg-white/5"
+                            : "text-indigo-600 bg-gray-100"
+                          : isNight
                             ? "hover:bg-white/10"
                             : "hover:bg-gray-200"
                         }

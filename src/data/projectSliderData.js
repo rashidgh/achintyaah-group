@@ -66,7 +66,7 @@ const projectSliderData = [
     ],
 
     content:
-      "AVPL is actively engaged in the rehabilitation and revival of lead-acid batteries through advanced in-house technology. The initiative promotes sustainable development while significantly reducing environmental impact by minimizing battery waste. In parallel, our alternative green power and energy storage systems operate independently through concentrated photovoltaic (CPV) solar panels designed to meet diverse customer energy needs.",
+      "AVPL is actively engaged in delivering advanced power and energy solutions through innovative in-house technology. The initiative promotes sustainable development while significantly reducing environmental impact by optimizing energy efficiency and minimizing waste. In parallel, our alternative green power and energy storage systems operate independently through concentrated photovoltaic (CPV) solar panels designed to meet diverse customer energy demands.",
   },
 ];
 

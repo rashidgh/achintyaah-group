@@ -2,66 +2,57 @@ import batteryCarosel from "../assets/images/about/battery.avif";
 import ootyCarosel from "../assets/images/about/otty.avif";
 import goaCarosel from "../assets/images/about/goa.avif";
 import corporateCarosel from "../assets/images/about/corporate.jpg";
-
-export const aboutImages = [
-  goaCarosel,
-  ootyCarosel,
-  batteryCarosel, corporateCarosel
-]
+export const aboutImages = [goaCarosel, ootyCarosel, batteryCarosel, corporateCarosel]
 
 export const aboutMoreData = {
-  title: "About This App",
+  title: "About Achintyaah Group",
 
   overview:
-    "This application is designed to showcase real-world projects executed across infrastructure, industrial, and on-site development domains. It provides a clear visual and informational overview of project execution, site progress, and operational capabilities, helping stakeholders understand the scale, quality, and impact of each project.",
+    "Achintyaah Group is a diversified enterprise committed to driving innovation across green energy, alternative investments, real estate development, premium lifestyle ventures, and advanced storage technologies. Established with a vision to build sustainable and high-value businesses, the group focuses on long-term growth, operational excellence, and strategic expansion.",
 
   sections: [
     {
-      heading: "Purpose of the App",
+      heading: "Our Vision",
       content:
-        "The primary purpose of this app is to present completed and ongoing projects in a structured and transparent manner. It serves as a digital portfolio that highlights execution quality, planning standards, and on-ground implementation across diverse project environments.",
+        "To build a future-ready enterprise that integrates sustainable energy solutions, strategic investments, and premium infrastructure projects while delivering long-term value to stakeholders and society.",
     },
     {
-      heading: "What the App Showcases",
+      heading: "Our Core Businesses",
       content:
-        "The app showcases infrastructure development projects, industrial manufacturing setups, residential and site-based construction work, and field execution activities. Each project reflects practical challenges, real execution environments, and outcome-driven delivery.",
+        "Achintyaah Group operates across green energy solutions including lead-acid battery refurbishment, alternative investment funds, real estate development, premium clubs, racecourses, golf resorts, bullion trading, fine jewellery, gold refining, and advanced energy storage systems.",
     },
     {
-      heading: "How the App Is Used",
+      heading: "Our Approach",
       content:
-        "This app can be used by clients, partners, and internal teams to review project details, understand execution workflows, and evaluate delivery standards. It acts as a centralized platform for project visibility and reference.",
+        "We combine in-house technological innovation, strategic partnerships, and strong operational frameworks to ensure efficiency, reliability, and scalable growth across all business verticals.",
     },
     {
-      heading: "Design & Experience",
+      heading: "Innovation & Sustainability",
       content:
-        "The application is designed with a clean, modern, and responsive interface to ensure smooth navigation across devices. Visual clarity, readability, and structured content presentation are prioritized for an intuitive user experience.",
+        "Sustainability is at the core of our operations. Through energy-efficient solutions and responsible business practices, we aim to contribute towards a cleaner environment and stronger economic ecosystems.",
     },
     {
-      heading: "Why This App Matters",
+      heading: "Why Achintyaah Group",
       content:
-        "By bringing projects into a single digital platform, the app improves transparency, builds trust, and enables better communication. It reflects a commitment to quality execution, accountability, and continuous improvement.",
+        "Our diversified portfolio, visionary leadership, and commitment to excellence position us as a forward-thinking enterprise capable of executing complex projects with integrity, transparency, and measurable impact.",
     },
   ],
 
   points: [
-    "Showcases real on-ground and industrial projects",
-    "Clear visual representation of execution work",
-    "Structured project information for easy understanding",
-    "Responsive and modern user interface",
-    "Supports client and stakeholder transparency",
-    "Acts as a centralized digital project portfolio",
+    "Diversified multi-sector enterprise",
+    "Green energy and battery refurbishment expertise",
+    "Strategic alternative investment operations",
+    "Premium real estate and lifestyle ventures",
+    "Bullion trading and gold refining capabilities",
+    "Innovation-driven and sustainability-focused approach",
   ],
 
   industries: [
-    "Infrastructure & Construction",
-    "Industrial Manufacturing",
-    "Energy & Power Systems",
-    "Residential & Commercial Development",
-    "Site & Field Operations",
-    "Engineering & Project Execution",
+    "Green Energy & Storage Solutions",
+    "Alternative Investment Funds",
+    "Real Estate Development",
+    "Premium Clubs & Resorts",
+    "Bullion Trading & Gold Refining",
+    "Infrastructure & Strategic Ventures",
   ],
 };
-
-
-
-

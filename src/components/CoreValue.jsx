@@ -12,14 +12,18 @@ const CoreValue = ({ theme }) => {
   };
 
   return (
-    <div className="pb-28">
+    <div className="pb-28 pt-6">
       {/* HEADING */}
-      <h2 className="text-center text-3xl font-bold mb-16">
+      <div className="mb-8">
+        <h2 className="text-center text-3xl font-bold ">
         Our{" "}
         <span className={isDay ? "text-indigo-600" : "text-indigo-400"}>
           Core Values
         </span>
       </h2>
+      <div className="h-1.5 w-20 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+      </div>
+
 
       {/* ACCORDION */}
       <div className="w-full px-6 lg:px-24 space-y-6">
@@ -27,10 +31,9 @@ const CoreValue = ({ theme }) => {
           <div
             key={item.title}
             className={`rounded-2xl transition-all duration-300
-              ${
-                isDay
-                  ? "bg-white shadow-md hover:shadow-xl"
-                  : "bg-white/5 border border-white/10"
+              ${isDay
+                ? "bg-white shadow-md hover:shadow-xl"
+                : "bg-white/5 border border-white/10"
               }
             `}
           >
@@ -44,9 +47,8 @@ const CoreValue = ({ theme }) => {
               </h3>
 
               <div
-                className={`transition-transform duration-300 ${
-                  activeIndex === index ? "rotate-180" : ""
-                }`}
+                className={`transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""
+                  }`}
               >
                 {activeIndex === index ? (
                   <Minus size={20} />
@@ -67,9 +69,8 @@ const CoreValue = ({ theme }) => {
                   className="overflow-hidden "
                 >
                   <div
-                    className={`px-6 pb-6 text-base leading-relaxed ${
-                      isDay ? "text-slate-700" : "text-slate-300"
-                    }`}
+                    className={`px-6 pb-6 text-base leading-relaxed ${isDay ? "text-slate-700" : "text-slate-300"
+                      }`}
                   >
                     {item.text}
                   </div>

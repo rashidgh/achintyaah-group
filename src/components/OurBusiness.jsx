@@ -18,10 +18,10 @@ export default function Projects({ theme }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-3xl mx-auto text-center mb-20"
+        className="max-w-3xl mx-auto text-center mb-12"
       >
         <h2 className="text-4xl font-bold mb-4">
-          Our <span className="text-indigo-400">Businesses
+          Our <span className="text-indigo-600">Businesses
           </span>
         </h2>
         <p

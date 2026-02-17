@@ -1,5 +1,5 @@
-import ceo from "../assets/img/Sreetharan.png";
-import gkrishna from "../assets/img/g-krishna-kumar.jpg";
+import ceo from "../assets/images/leaders/Sreetharan.png";
+import gkrishna from "../assets/images/leaders/g-krishna-kumar.jpg";
 export const leaders = [
     {
         name: "Dr. Sreetharan Murthy",

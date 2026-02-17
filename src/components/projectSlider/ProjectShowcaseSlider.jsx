@@ -27,7 +27,7 @@ const ProjectShowcaseSlider = ({ title, images, content, theme = "day" }) => {
   };
 
   return (
-    <div className="w-full py-12 md:py-16 px-4 md:px-8 max-w-[1440px] mx-auto">
+    <div className="w-full mb-18 px-4 md:px-8 max-w-360 mx-auto">
       {/* Header Section - Now Full Width */}
       <div className="w-full mb-10">
         <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 ${
@@ -73,7 +73,7 @@ const ProjectShowcaseSlider = ({ title, images, content, theme = "day" }) => {
             {images.map((img, index) => (
               <div
                 key={index}
-                className={`${isMobile ? "w-full" : "w-1/2"} flex-shrink-0 px-2`}
+                className={`${isMobile ? "w-full" : "w-1/2"} shrink-0 px-2`}
               >
                 <div
                   className="relative aspect-video rounded-xl overflow-hidden cursor-pointer group/card border border-slate-200/50"
@@ -109,7 +109,7 @@ const ProjectShowcaseSlider = ({ title, images, content, theme = "day" }) => {
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-slate-950/98 backdrop-blur-md flex items-center justify-center z-[999] p-4" onClick={() => setSelectedImage(null)}>
+        <div className="fixed inset-0 bg-slate-950/98 backdrop-blur-md flex items-center justify-center z-999 p-4" onClick={() => setSelectedImage(null)}>
           <button className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors">
             <X size={32} />
           </button>
